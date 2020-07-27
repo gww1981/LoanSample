@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Volo.Abp.Domain.Entities;
 
-namespace LoanSample.Domain
+namespace LoanSample.Domain.Entities
 {
-    public class Customer : AggregateRoot<Guid>
+    public class Customer : AggregateRootWithEvents<Guid>
     {
         private readonly List<LinkMan> _linkMen;
 

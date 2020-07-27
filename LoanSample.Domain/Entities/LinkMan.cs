@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using Volo.Abp.Domain.Entities;
 
-namespace LoanSample.Domain
+namespace LoanSample.Domain.Entities
 {
     public class LinkMan : Entity<Guid>
     {
         public string Name { get; set; }
 
         public string Mobile { get; set; }
+
+        public string IdNo { get; set; }
     }
 }
