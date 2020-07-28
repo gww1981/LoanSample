@@ -11,7 +11,6 @@ namespace LoanSample.Domain.Entities
     {
         void AddDomainEvent(INotification eventItem);
         void RemoveDomainEvent(INotification eventItem);
-
         void ClearDomainEvents();
     }
 
@@ -23,7 +22,7 @@ namespace LoanSample.Domain.Entities
 
         public void AddDomainEvent(INotification eventItem)
         {
-            _domainEvents = _domainEvents ?? new List<INotification>();
+            _domainEvents ??= new List<INotification>();
             _domainEvents.Add(eventItem);
         }
 

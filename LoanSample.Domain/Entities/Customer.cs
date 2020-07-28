@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoanSample.Domain.Events;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Volo.Abp.Domain.Entities;
@@ -17,7 +18,6 @@ namespace LoanSample.Domain.Entities
         {
             get { return _linkMen.AsReadOnly(); }
         }
-
         
         public Customer()
         {
@@ -27,11 +27,13 @@ namespace LoanSample.Domain.Entities
         public void AddLinkMan(LinkMan linkMan)
         {
             _linkMen.Add(linkMan);
+            AddDomainEvent(new LinkManAdded(this, linkMan));
         }
 
         public void RemoveLinkMan(LinkMan linkMan)
         {
             _linkMen.Remove(linkMan);
+            RemoveDomainEvent(new LinkManRemoved(this, linkMan));
         }
     }
 }
