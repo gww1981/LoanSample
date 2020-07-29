@@ -15,9 +15,9 @@ using Volo.Abp.Modularity;
 
 namespace LoanSample.Api
 {
-    [DependsOn(typeof(AbpAspNetCoreModule))]
+    [DependsOn(typeof(AbpAspNetCoreMvcModule))]
     [DependsOn(typeof(AbpAutofacModule))]
-    [DependsOn(typeof(LoanSampleDomainModule))]
+    [DependsOn(typeof(LoanSampleApplicationModule))]
     public class LoanSampleApiModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

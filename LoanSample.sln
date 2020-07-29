@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Domain", "LoanSample.Domain\LoanSample.Domain.csproj", "{57B6E7B9-E9D2-4656-B25B-158F9300E2CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Application.Contracts", "LoanSample.Application.Contracts\LoanSample.Application.Contracts.csproj", "{46B1841C-8B38-468C-BD53-B314338A0407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Application.Contracts", "LoanSample.Application.Contracts\LoanSample.Application.Contracts.csproj", "{46B1841C-8B38-468C-BD53-B314338A0407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Application", "LoanSample.Application\LoanSample.Application.csproj", "{AFC8A547-7B2A-4173-AE70-218C923B33D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Application", "LoanSample.Application\LoanSample.Application.csproj", "{AFC8A547-7B2A-4173-AE70-218C923B33D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Api", "LoanSample.Api\LoanSample.Api.csproj", "{B1E05D48-A6B9-4143-AD43-D8044E8B611B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Api", "LoanSample.Api\LoanSample.Api.csproj", "{2274BDE8-A828-41BD-9447-C5D7A3769C09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{AFC8A547-7B2A-4173-AE70-218C923B33D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC8A547-7B2A-4173-AE70-218C923B33D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC8A547-7B2A-4173-AE70-218C923B33D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1E05D48-A6B9-4143-AD43-D8044E8B611B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1E05D48-A6B9-4143-AD43-D8044E8B611B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1E05D48-A6B9-4143-AD43-D8044E8B611B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1E05D48-A6B9-4143-AD43-D8044E8B611B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2274BDE8-A828-41BD-9447-C5D7A3769C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2274BDE8-A828-41BD-9447-C5D7A3769C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2274BDE8-A828-41BD-9447-C5D7A3769C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2274BDE8-A828-41BD-9447-C5D7A3769C09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
