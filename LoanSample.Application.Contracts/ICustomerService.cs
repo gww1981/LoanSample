@@ -9,6 +9,8 @@ namespace LoanSample.Application.Contracts
 {
     public interface ICustomerService : IApplicationService
     {
+        Task<List<CustomerDto>> GetListAsync();
+
         Task<CustomerDto> CreateAsync(CustomerDto customer);
 
         Task<CustomerDto> AddLinkManAsync(CustomerDto customer);

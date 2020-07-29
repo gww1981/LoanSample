@@ -21,6 +21,7 @@ namespace LoanSample.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .UseAutofac();
     }
 }
