@@ -21,7 +21,11 @@ namespace LoanSample.Migrator
             }))
             {
                 application.Initialize();
-               await application.ServiceProvider.GetRequiredService<CustomerStoreDbMigrationService>().MigrateAsync();
+
+               await application
+                    .ServiceProvider
+                    .GetRequiredService<CustomerStoreDbMigrationService>()
+                    .MigrateAsync();
 
                 application.Shutdown();
             }
