@@ -8,7 +8,7 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace LoanSample.EntityFrameworkCore
 {
-    [ConnectionStringName("CustomerConnectionString")]
+    [ConnectionStringName("CustomerDbConnection")]
     public class CustomerDbContext : AbpDbContext<CustomerDbContext>
     {
         public CustomerDbContext(DbContextOptions<CustomerDbContext> options):base(options)

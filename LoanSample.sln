@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Application", "L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Api", "LoanSample.Api\LoanSample.Api.csproj", "{2274BDE8-A828-41BD-9447-C5D7A3769C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.EntityFrameworkCore", "LoanSample.EntityFrameworkCore\LoanSample.EntityFrameworkCore.csproj", "{CA04A147-3813-49BD-BB92-947A768649A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.EntityFrameworkCore", "LoanSample.EntityFrameworkCore\LoanSample.EntityFrameworkCore.csproj", "{CA04A147-3813-49BD-BB92-947A768649A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Migrator", "LoanSample.Migrator\LoanSample.Migrator.csproj", "{7693D109-E644-4DE9-82E8-27DFE96823D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CA04A147-3813-49BD-BB92-947A768649A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA04A147-3813-49BD-BB92-947A768649A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA04A147-3813-49BD-BB92-947A768649A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7693D109-E644-4DE9-82E8-27DFE96823D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7693D109-E644-4DE9-82E8-27DFE96823D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7693D109-E644-4DE9-82E8-27DFE96823D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7693D109-E644-4DE9-82E8-27DFE96823D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
