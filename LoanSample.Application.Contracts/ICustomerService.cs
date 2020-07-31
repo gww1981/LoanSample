@@ -10,7 +10,7 @@ namespace LoanSample.Application.Contracts
 {
     public interface ICustomerService : IApplicationService
     {
-        Task<List<CustomerDto>> GetListAsync();
+        Task<List<CustomerDto>> GetListAsync(CancellationToken cancellationToken);
 
         Task<CustomerDto> CreateAsync(CustomerDto customer);
 

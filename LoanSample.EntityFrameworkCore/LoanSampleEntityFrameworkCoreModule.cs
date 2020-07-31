@@ -1,4 +1,5 @@
 ﻿using LoanSample.Domain;
+using LoanSample.Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,10 @@ namespace LoanSample.EntityFrameworkCore
         {
             base.ConfigureServices(context);
 
-            context.Services.AddAbpDbContext<CustomerDbContext>(builder => { builder.AddDefaultRepositories(); });
+            context.Services.AddAbpDbContext<CustomerDbContext>(options => {
+                options.AddDefaultRepositories();
+                options.AddRepository<Customer, CustomerRepository>();
+            });
 
             Configure<AbpDbContextOptions>(options => {
                 options.UseMySQL();

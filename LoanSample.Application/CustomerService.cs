@@ -1,8 +1,11 @@
 ﻿using LoanSample.Application.Contracts;
 using LoanSample.Application.Contracts.Dtos;
 using LoanSample.Domain.Entities;
+using LoanSample.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,18 +17,18 @@ namespace LoanSample.Application
 {
     public class CustomerService : ApplicationService, ICustomerService
     {
-        private IRepository<Customer, Guid> _customerRepo;
+        private ICustomerRepository _customerRepo;
 
         
 
-        public CustomerService(IRepository<Customer, Guid> customerRepo)
+        public CustomerService(ICustomerRepository customerRepo)
         {
             _customerRepo = customerRepo;
         }
         
-        public async Task<List<CustomerDto>> GetListAsync()
+        public async Task<List<CustomerDto>> GetListAsync(CancellationToken cancellationToken = default)
         {
-            var customers = await _customerRepo.GetListAsync();
+            var customers = await _customerRepo.GetListAsync(true, cancellationToken);
 
             return ObjectMapper.Map<List<Customer>, List<CustomerDto>>(customers);
         }
@@ -50,6 +53,7 @@ namespace LoanSample.Application
 
         public async Task<CustomerDto> GetAsync(Guid id, CancellationToken cancellationToken = default)
         {
+            //var customerEntity = await _customerRepo.WithDetails().Include(c=>c..FirstOrDefaultAsync(c => c.Id == id);
             var customerEntity = await _customerRepo.GetAsync(id,true);
 
             if (customerEntity == null)

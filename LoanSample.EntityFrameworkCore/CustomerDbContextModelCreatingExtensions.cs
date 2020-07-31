@@ -15,8 +15,15 @@ namespace LoanSample.EntityFrameworkCore
         {
             Check.NotNull(builder, nameof(builder));
 
-            builder.Entity<Customer>(c => {
+            builder.Entity<Customer>(c =>
+            {
                 c.ToTable("Customer");
+                c.ConfigureByConvention();
+            });
+
+            builder.Entity<LinkMan>(c =>
+            {
+                c.ToTable("LinkMan");
                 c.ConfigureByConvention();
             });
         }
