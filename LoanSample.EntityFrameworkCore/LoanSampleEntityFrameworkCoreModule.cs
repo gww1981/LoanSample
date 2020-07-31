@@ -10,6 +10,7 @@ using Volo.Abp.Modularity;
 namespace LoanSample.EntityFrameworkCore
 {
     [DependsOn(typeof(LoanSampleDomainModule))]
+    [DependsOn(typeof(AbpEntityFrameworkCoreModule))]
     public class LoanSampleEntityFrameworkCoreModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

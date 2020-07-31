@@ -6,8 +6,7 @@ namespace LoanSample.Application.Contracts.Dtos
 {
     public class LinkManDto
     {
-        public Guid Id { get; set;
-        }
+        public Guid Id { get; set;}
         public string Name { get; set; }
 
         public string Mobile { get; set; }

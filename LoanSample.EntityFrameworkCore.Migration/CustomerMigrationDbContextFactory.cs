@@ -23,9 +23,10 @@ namespace LoanSample.EntityFrameworkCore.Migration
 
         private static IConfigurationRoot BuildConfiguration()
         {
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", false);
+                .AddJsonFile("appsettings.json", optional: false);
 
             return builder.Build();
         }

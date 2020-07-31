@@ -7,22 +7,26 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
+using DependencyAttribute = Volo.Abp.DependencyInjection.DependencyAttribute;
 
 namespace LoanSample.EntityFrameworkCore.Migration
 {
-    [Volo.Abp.DependencyInjection.Dependency(ServiceLifetime.Transient, ReplaceServices = true)]
+    [Dependency(ReplaceServices = true)]
     [ExposeServices(typeof(ICustomerStoreDbSchemaMigrator))]
-    public class EntityFrameworkCoreCustomerDbContextMigrator : ICustomerStoreDbSchemaMigrator
+    public class EntityFrameworkCoreCustomerDbContextMigrator : ICustomerStoreDbSchemaMigrator, ITransientDependency
     {
-        private readonly CustomerMigrationDbContext _migrationDbContext;
-        public EntityFrameworkCoreCustomerDbContextMigrator(CustomerMigrationDbContext migrationDbContext)
+        private readonly IServiceProvider _serviceProvider;
+        public EntityFrameworkCoreCustomerDbContextMigrator(IServiceProvider serviceProvider)
         {
-            _migrationDbContext = migrationDbContext;
+            _serviceProvider = serviceProvider;
         }
 
         public async Task MigrateAsync()
         {
-            await _migrationDbContext.Database.MigrateAsync();
+            await _serviceProvider
+                .GetRequiredService<CustomerMigrationDbContext>()
+                .Database
+                .MigrateAsync();
         }
     }
 }

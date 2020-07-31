@@ -7,10 +7,17 @@ namespace LoanSample.Domain.Entities
 {
     public class LinkMan : Entity<Guid>
     {
-        public string Name { get; set; }
+        protected LinkMan() { }
 
-        public string Mobile { get; set; }
+        public LinkMan (Guid guid)
+            :base(guid)
+        {
 
-        public string IdNo { get; set; }
+        }
+        public virtual string Name { get;  set; }
+
+        public virtual string Mobile { get;  set; }
+
+        public virtual string IdNo { get;  set; }
     }
 }

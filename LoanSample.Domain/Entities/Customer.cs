@@ -8,31 +8,30 @@ namespace LoanSample.Domain.Entities
 {
     public class Customer : AggregateRootWithEvents<Guid>
     {
-        private readonly List<LinkMan> _linkMen;
 
-        public string Name { get; set; }
+        public virtual string Name { get;  set; }
 
-        public string Address { get; set;  }
+        public virtual string Address { get;  set;  }
 
-        public IReadOnlyCollection<LinkMan> LinkMen 
+        public virtual List<LinkMan> LinkMen 
         {
-            get { return _linkMen.AsReadOnly(); }
+            get; set; 
         }
-        
-        public Customer()
+
+        protected Customer()
         {
-            _linkMen = new List<LinkMan>();
+            LinkMen = new List<LinkMan>();
         }
 
         public void AddLinkMan(LinkMan linkMan)
         {
-            _linkMen.Add(linkMan);
+            LinkMen.Add(linkMan);
             AddDomainEvent(new LinkManAdded(this, linkMan));
         }
 
         public void RemoveLinkMan(LinkMan linkMan)
         {
-            _linkMen.Remove(linkMan);
+            LinkMen.Remove(linkMan);
             RemoveDomainEvent(new LinkManRemoved(this, linkMan));
         }
     }
