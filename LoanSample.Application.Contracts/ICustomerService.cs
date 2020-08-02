@@ -12,9 +12,9 @@ namespace LoanSample.Application.Contracts
     {
         Task<List<CustomerDto>> GetListAsync(CancellationToken cancellationToken);
 
-        Task<CustomerDto> CreateAsync(CustomerDto customer);
+        Task<CustomerDto> CreateAsync(CustomerDto customer, CancellationToken cancellationToken = default);
 
-        Task<CustomerDto> AddLinkManAsync(CustomerDto customer, LinkManDto linkMan);
+        Task<CustomerDto> AddLinkManAsync(Guid id, LinkManDto linkMan, CancellationToken cancellationToken = default);
 
         Task<CustomerDto> GetAsync(Guid id, CancellationToken cancellationToken = default);
     }
